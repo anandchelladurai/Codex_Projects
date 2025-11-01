@@ -1,0 +1,20 @@
+[
+  {
+    "retailer": "Ocado",
+    "title": "Ocado Tilda Pure Basmati Rice 5kg",
+    "url": "https://www.ocado.com/products/0000001",
+    "image_url": "https://via.placeholder.com/80",
+    "size": "5 kg",
+    "price": 19.0,
+    "in_stock": true
+  },
+  {
+    "retailer": "Ocado",
+    "title": "Ocado Toor Dal 1.5kg",
+    "url": "https://www.ocado.com/products/0000002",
+    "image_url": "https://via.placeholder.com/80",
+    "size": "1.5 kg",
+    "price": 6.75,
+    "in_stock": false
+  }
+]

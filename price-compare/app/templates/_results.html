@@ -1,0 +1,65 @@
+<div class="space-y-4">
+  {% if warnings %}
+  <div class="warning-banner">
+    <p class="font-semibold">Heads up</p>
+    <ul class="list-disc list-inside text-sm text-amber-200 space-y-1">
+      {% for warning in warnings %}
+      <li>{{ warning }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if results %}
+  <div class="table-card overflow-hidden">
+    <table class="min-w-full text-sm">
+      <thead class="bg-slate-800/60 text-slate-300">
+        <tr>
+          <th class="px-4 py-3 text-left font-medium">Retailer</th>
+          <th class="px-4 py-3 text-left font-medium">Product</th>
+          <th class="px-4 py-3 text-left font-medium">Size</th>
+          <th class="px-4 py-3 text-left font-medium">Total Price</th>
+          <th class="px-4 py-3 text-left font-medium">Unit Price</th>
+          <th class="px-4 py-3 text-left font-medium">In Stock?</th>
+          <th class="px-4 py-3 text-left font-medium">Last Checked</th>
+          <th class="px-4 py-3 text-left font-medium">Link</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-800/60">
+        {% for item in results %}
+        <tr class="hover:bg-slate-800/40 transition">
+          <td class="px-4 py-3 font-semibold" data-label="Retailer">{{ item.retailer }}</td>
+          <td class="px-4 py-3 space-y-1" data-label="Product">
+            <div class="font-medium text-slate-100">{{ item.title }}</div>
+            {% if item.is_indian_brand %}
+            <span class="badge-indian">Indian label</span>
+            {% endif %}
+          </td>
+          <td class="px-4 py-3 text-slate-300" data-label="Size">{{ item.size }}</td>
+          <td class="px-4 py-3" data-label="Total">£{{ item.total_price_formatted }}</td>
+          <td class="px-4 py-3" data-label="Unit">£{{ item.unit_price_formatted }}</td>
+          <td class="px-4 py-3" data-label="Stock">
+            {% if item.in_stock %}
+            <span class="text-emerald-400 font-semibold">In stock</span>
+            {% else %}
+            <span class="text-rose-400 font-semibold">Out of stock</span>
+            {% endif %}
+          </td>
+          <td class="px-4 py-3 text-slate-400" data-label="Checked">{{ item.last_checked_display }}</td>
+          <td class="px-4 py-3" data-label="Link">
+            <a href="{{ item.url }}" class="text-sky-300 hover:text-sky-200" target="_blank" rel="noopener">View</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <div class="table-card p-8 text-center space-y-3">
+    <p class="text-lg font-semibold">No matches just yet.</p>
+    <p class="text-slate-300">
+      Try adjusting your search terms, removing specific brands, or exploring alternative pack sizes (e.g. "basmati rice 5kg" or "maggi noodles multipack").
+    </p>
+  </div>
+  {% endif %}
+</div>

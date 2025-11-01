@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UK Supermarket Price Compare (Indian Groceries)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body class="bg-slate-900 text-slate-100 min-h-screen">
+    <div class="max-w-6xl mx-auto px-4 py-10">
+      <section class="space-y-6">
+        <header class="text-center space-y-3">
+          <h1 class="text-3xl font-semibold text-white">UK Supermarket Price Compare (Indian Groceries)</h1>
+          <p class="text-slate-300 max-w-2xl mx-auto">
+            Search across Tesco, Sainsbury's, Asda, Morrisons, Aldi, Lidl, Waitrose, Ocado, and Iceland. Data uses curated fixtures by default; enable live mode to attempt real-time lookups where available.
+          </p>
+        </header>
+        <form
+          id="search-form"
+          class="table-card p-6 space-y-4"
+          hx-post="/search"
+          hx-target="#results"
+          hx-indicator="#search-loading"
+        >
+          <div>
+            <label for="query" class="block text-sm font-medium text-slate-300">Search Indian grocery item</label>
+            <div class="mt-1 relative">
+              <input
+                type="text"
+                name="query"
+                id="query"
+                required
+                minlength="2"
+                placeholder="Search e.g. 'toor dal 1kg', 'basmati rice'"
+                class="w-full rounded-xl bg-slate-800/70 border border-slate-700 px-4 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500"
+              />
+              <div
+                id="search-loading"
+                class="htmx-indicator absolute inset-y-0 right-0 flex items-center pr-4 text-sky-300"
+                aria-hidden="true"
+              >
+                <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-4 items-center">
+            <label class="flex items-center gap-2 text-sm text-slate-300">
+              <input type="checkbox" name="live" value="true" class="rounded border-slate-600 bg-slate-800" />
+              Use live data
+            </label>
+            <label class="flex items-center gap-2 text-sm text-slate-300">
+              <input type="checkbox" name="indian_only" value="true" class="rounded border-slate-600 bg-slate-800" />
+              Only Indian-label SKUs
+            </label>
+            <div class="ml-auto flex gap-2 text-sm">
+              <input type="hidden" name="sort_by" id="sort-by" value="unit" />
+              <button
+                type="button"
+                class="px-3 py-1.5 rounded-lg border border-slate-700 text-slate-200 hover:bg-slate-800 transition"
+                hx-post="/search"
+                hx-target="#results"
+                hx-include="#search-form"
+                hx-vals='{"sort_by": "unit"}'
+              >
+                Sort by unit price
+              </button>
+              <button
+                type="button"
+                class="px-3 py-1.5 rounded-lg border border-slate-700 text-slate-200 hover:bg-slate-800 transition"
+                hx-post="/search"
+                hx-target="#results"
+                hx-include="#search-form"
+                hx-vals='{"sort_by": "total"}'
+              >
+                Sort by total price
+              </button>
+            </div>
+          </div>
+          <div>
+            <button
+              type="submit"
+              class="inline-flex items-center justify-center rounded-xl bg-sky-500 hover:bg-sky-400 transition px-6 py-3 font-semibold text-slate-900"
+            >
+              Search supermarkets
+            </button>
+          </div>
+        </form>
+        <div id="results" class="space-y-4"></div>
+      </section>
+    </div>
+  </body>
+</html>

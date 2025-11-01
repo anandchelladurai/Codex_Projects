@@ -1,0 +1,29 @@
+[
+  {
+    "retailer": "Asda",
+    "title": "Asda Toor Dal 1kg",
+    "url": "https://groceries.asda.com/product/0000001",
+    "image_url": "https://via.placeholder.com/80",
+    "size": "1 kg",
+    "price": 4.6,
+    "in_stock": true
+  },
+  {
+    "retailer": "Asda",
+    "title": "Asda Tilda Basmati Rice 5kg",
+    "url": "https://groceries.asda.com/product/0000002",
+    "image_url": "https://via.placeholder.com/80",
+    "size": "5 kg",
+    "price": 15.5,
+    "in_stock": true
+  },
+  {
+    "retailer": "Asda",
+    "title": "Asda Maggi Noodles Masala 12x70g",
+    "url": "https://groceries.asda.com/product/0000003",
+    "image_url": "https://via.placeholder.com/80",
+    "size": "12x70 g",
+    "price": 6.0,
+    "in_stock": false
+  }
+]

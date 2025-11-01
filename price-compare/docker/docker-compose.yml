@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  web:
+    build: ..
+    ports:
+      - "8000:8000"
+    environment:
+      LIVE_MODE: "false"
+    volumes:
+      - ../app:/app/app
+      - ../app/templates:/app/app/templates
+      - ../app/static:/app/app/static

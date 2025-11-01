@@ -1,0 +1,29 @@
+[
+  {
+    "retailer": "Sainsbury's",
+    "title": "Sainsbury's Toor Dal 1kg",
+    "url": "https://www.sainsburys.co.uk/gol-ui/product/0000001",
+    "image_url": "https://via.placeholder.com/80",
+    "size": "1 kg",
+    "price": 4.75,
+    "in_stock": true
+  },
+  {
+    "retailer": "Sainsbury's",
+    "title": "Sainsbury's Laila Basmati Rice 5kg",
+    "url": "https://www.sainsburys.co.uk/gol-ui/product/0000002",
+    "image_url": "https://via.placeholder.com/80",
+    "size": "5 kg",
+    "price": 17.0,
+    "in_stock": true
+  },
+  {
+    "retailer": "Sainsbury's",
+    "title": "Sainsbury's Maggi Masala Noodles 10x70g",
+    "url": "https://www.sainsburys.co.uk/gol-ui/product/0000003",
+    "image_url": "https://via.placeholder.com/80",
+    "size": "10x70 g",
+    "price": 5.5,
+    "in_stock": true
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "retailer": "Morrisons",
+    "title": "Morrisons East End Toor Dal 1kg",
+    "url": "https://groceries.morrisons.com/products/0000001",
+    "image_url": "https://via.placeholder.com/80",
+    "size": "1 kg",
+    "price": 4.4,
+    "in_stock": true
+  },
+  {
+    "retailer": "Morrisons",
+    "title": "Morrisons Basmati Rice 5kg",
+    "url": "https://groceries.morrisons.com/products/0000002",
+    "image_url": "https://via.placeholder.com/80",
+    "size": "5 kg",
+    "price": 15.0,
+    "in_stock": true
+  }
+]
