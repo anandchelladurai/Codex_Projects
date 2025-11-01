@@ -1,0 +1,20 @@
+[
+  {
+    "retailer": "Iceland",
+    "title": "Iceland Basmati Rice 4kg",
+    "url": "https://www.iceland.co.uk/p/0000001",
+    "image_url": "https://via.placeholder.com/80",
+    "size": "4 kg",
+    "price": 13.0,
+    "in_stock": true
+  },
+  {
+    "retailer": "Iceland",
+    "title": "Iceland Maggi Curry Noodles 6 Pack",
+    "url": "https://www.iceland.co.uk/p/0000002",
+    "image_url": "https://via.placeholder.com/80",
+    "size": "6 pack",
+    "price": 4.0,
+    "in_stock": true
+  }
+]

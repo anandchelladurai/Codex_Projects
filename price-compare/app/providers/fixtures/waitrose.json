@@ -1,0 +1,20 @@
+[
+  {
+    "retailer": "Waitrose",
+    "title": "Waitrose Basmati Rice 5kg",
+    "url": "https://www.waitrose.com/ecom/products/0000001",
+    "image_url": "https://via.placeholder.com/80",
+    "size": "5 kg",
+    "price": 18.5,
+    "in_stock": true
+  },
+  {
+    "retailer": "Waitrose",
+    "title": "Waitrose Maggi Noodles Masala 10 Pack",
+    "url": "https://www.waitrose.com/ecom/products/0000002",
+    "image_url": "https://via.placeholder.com/80",
+    "size": "10 pack",
+    "price": 6.75,
+    "in_stock": true
+  }
+]

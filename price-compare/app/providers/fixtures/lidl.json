@@ -1,0 +1,20 @@
+[
+  {
+    "retailer": "Lidl",
+    "title": "Lidl Basmati Rice 5kg",
+    "url": "https://www.lidl.co.uk/p-0000001",
+    "image_url": "https://via.placeholder.com/80",
+    "size": "5 kg",
+    "price": 11.99,
+    "in_stock": true
+  },
+  {
+    "retailer": "Lidl",
+    "title": "Lidl Toor Dal 2kg",
+    "url": "https://www.lidl.co.uk/p-0000002",
+    "image_url": "https://via.placeholder.com/80",
+    "size": "2 kg",
+    "price": 6.5,
+    "in_stock": false
+  }
+]

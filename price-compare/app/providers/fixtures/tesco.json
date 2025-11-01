@@ -1,0 +1,29 @@
+[
+  {
+    "retailer": "Tesco",
+    "title": "Tesco Toor Dal 1kg",
+    "url": "https://www.tesco.com/groceries/en-GB/products/0000001",
+    "image_url": "https://via.placeholder.com/80",
+    "size": "1 kg",
+    "price": 4.5,
+    "in_stock": true
+  },
+  {
+    "retailer": "Tesco",
+    "title": "Tesco Finest Basmati Rice 5kg",
+    "url": "https://www.tesco.com/groceries/en-GB/products/0000002",
+    "image_url": "https://via.placeholder.com/80",
+    "size": "5 kg",
+    "price": 16.0,
+    "in_stock": true
+  },
+  {
+    "retailer": "Tesco",
+    "title": "Maggi 2 Minute Noodles Family Pack 12x70g",
+    "url": "https://www.tesco.com/groceries/en-GB/products/0000003",
+    "image_url": "https://via.placeholder.com/80",
+    "size": "12x70 g",
+    "price": 6.25,
+    "in_stock": false
+  }
+]
